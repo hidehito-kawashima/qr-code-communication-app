@@ -50,14 +50,9 @@
 
 1. 本リポジトリをクローンします。
    ```bash
-   git clone [https://github.com/hidehito-kawashima/qr-code-communication-app.git](https://github.com/hidehito-kawashima/qr-code-communication-app.git)
-2. Android Studioでプロジェクトを開き、Gradle Syncを実行します。
-3. 実機端末（Android）を接続し、実行（Run）してください。
+   git clone https://github.com/hidehito-kawashima/qr-code-communication-app.git
+2. Android Studioを起動し、 `Open` からクローンしたフォルダ内の **`MyApplication`** フォルダを選択して開いてください。
+   （※一番外側のルートフォルダを開くと、Gradleが正しく認識されない場合があります）
+3. Gradle Syncを実行します。
+4. 実機端末（Android）を接続し、実行（Run）してください。
 
-### トラブルシューティング
-Windows環境や、特定のAndroid Studioバージョンでプロジェクトを開いた際、Gradle Syncでエラーが発生する場合は、以下の設定を確認してください。
-
-#### Kotlinプラグインによるビルドエラーが発生する場合
-本プロジェクトは純粋な Java で開発されていますが、環境（特にWindows環境など）によっては、プロジェクト全体のビルドシステム（Gradle）がKotlinプラグインのメタデータを要求することがあります。もし同期エラーが発生した場合は、プロジェクトルートの build.gradle（または settings.gradle）を開き、コメントアウトされている以下の行のコメント（//）を外して有効化してください。
-// エラーが出る場合は、先頭の「//」を削除して有効化してください
-alias(libs.plugins.kotlin.android) apply false
