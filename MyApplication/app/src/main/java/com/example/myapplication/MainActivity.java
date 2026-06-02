@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
     volatile java.util.concurrent.ScheduledFuture<?> producerFuture = null;
 
 
-    final int qrVersion = 20;                     // ハードコーディング
-    final ErrorCorrectionLevel qrEcl = ErrorCorrectionLevel.L;
-    final int modulePx =10;                        // granularity
-    final int TARGET_HZ = 30;
-    // bps / generator frequency (<=30 for this mode)
+    final int qrVersion = 20;                     // version(1~40)
+    final ErrorCorrectionLevel qrEcl = ErrorCorrectionLevel.L;//ecc(L, M, Q, H)
+    final int modulePx =10;                        // granularity(1~10)
+    final int TARGET_HZ = 5;//(tx_rate(1~30)
+
     final int runID = 11;
     final long offset = 0;
 
@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     final AtomicBoolean decodeBusy = new AtomicBoolean(false); // for SkipQueue variant
-    static final int TARGET_SQUARE = 1080;
+    static final int TARGET_SQUARE = 1080;//二段階デコードのうち、一段階目の範囲(700などに変更)
 
 
-    static final long DECODE_TIMEOUT_MS = 100L;
+    static final long DECODE_TIMEOUT_MS = 100L;//デコード全体の時間(これを超えるとフレームを廃棄)
 
     // misc
 
@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (Map.Entry<Integer, ProducedMeta> e : producedMetaMap.entrySet()) {
             ProducedMeta m = e.getValue();
-            if (e.getKey() >= 51 && e.getKey() <= 300) {
+            if (e.getKey() >= 51 && e.getKey() <= 300) {//記録するフレームのシーケンス番号
                 csvWorker.appendProducedFinal(e.getKey(),
                         m.producedWallMs,
                         -1,
