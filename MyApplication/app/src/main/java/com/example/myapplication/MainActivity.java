@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     final int qrVersion = 20;                     // version(1~40)
     final ErrorCorrectionLevel qrEcl = ErrorCorrectionLevel.L;//ecc(L, M, Q, H)
     final int modulePx =10;                        // granularity(1~10)
-    final int TARGET_HZ = 5;//(tx_rate(1~30)
+    final int TARGET_HZ = 30;//(tx_rate(1~30)
 
     final int runID = 11;
     final long offset = 0;
