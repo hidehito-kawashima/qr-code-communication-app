@@ -7,9 +7,11 @@
  **論文リンク**: https://ipsj.ixsq.nii.ac.jp/records/2007423
 
 ---
-## **デモ動画**
-<video src="demo.MOV" width="100%" controls></video>
+## 🎬 デモ動画 (Demo Video)
 
+[![デモ動画のサムネイル](https://img.youtube.com/vi/HT3FTiOVifQ/0.jpg)](https://youtube.com/shorts/HT3FTiOVifQ)
+
+### 画像をクリックするとYouTubeでデモ動画(限定公開)が再生されます。
 ---
 
 ## 使用技術
@@ -68,8 +70,7 @@
 
 ```text
 .（リポジトリのルート）
-├── README.md                          # 本ドキュメント
-├── demo.MOV                           # デモ動画ファイル
+├── README.md                          # 本ドキュメント     
 └── MyApplication/                     # Android Studio プロジェクトルート
     └── app/
         └── src/
