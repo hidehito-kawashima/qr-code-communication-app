@@ -1,4 +1,4 @@
-# QRコード媒介型データ送受信アプリ (QR Code Communication App)
+# QRコード媒介型データ送受信アプリ
 
 災害時やオフライン環境における高速データ伝送を検証するためのAndroidアプリケーションです。汎用スマートフォンのディスプレイとカメラを用いた「スクリーン・カメラ通信」を実装し、最大30fpsでの安定したデータ送受信とエラー率の検証を目的として開発しました。
 
@@ -7,7 +7,7 @@
  **論文リンク**: https://ipsj.ixsq.nii.ac.jp/records/2007423
 
 ---
-## 🎬 デモ動画 (Demo Video)
+## デモ動画
 
 [![デモ動画のサムネイル](https://img.youtube.com/vi/HT3FTiOVifQ/0.jpg)](https://youtube.com/shorts/HT3FTiOVifQ)
 
